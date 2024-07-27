@@ -143,10 +143,10 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text" style="font-family: cursive;"> 4ORTY6Y-OFFICIAL-MD SESSION CREATOR</h3>
+            <h3 class="centered-text"> 4ORTY6Y-OFFICIAL-MD SESSION CREATOR</h3>
             <br>
-            <h6 style="font-family: sans-serif; font-weight: lighter;line-height: 2rem;">Thank you for choosing 4orty6yx-official-MD</h6>
-            <h6 style="font-family: cursive; color: #EF6C33;">Enter Your Number with your Country Code.</h6>
+            <h6 style="font-family: sans-serif; font-weight: bold;line-height: 2rem;">Thank you for choosing 4orty6yx-official-MD</h6>
+            <h6 style=" color: #EF6C33;">Enter Your Number with your Country Code.</h6>
             <div class="input-container">
               <input placeholder="254XXXXXXXXX" type="text" id="number"  name="">
               <button id="submit">create</button>
@@ -173,11 +173,11 @@
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
       obj.innerText = "COPIED";
-      obj.style = "color:#Blue;font-weight:bold;font-family:cursive";
+      obj.style = "color:Blue;font-weight:bold";
       obj.size = "5";
       setTimeout(() => {
         obj.innerText = text;
-        obj.style = "color:white;font-weight-bold;font-family:cursive";
+        obj.style = "color:white;font-weight-bold";
         obj.size = "5";
       }, 500);
     }
@@ -185,9 +185,9 @@
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color:lawngreen;font-weight:bold;font-family:cursive">Field blank</a><br><br>';
+        a.innerHTML = '<a style="color:lawngreen;font-weight:bold">Field blank</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:lawngreen;font-weight:bold;font-family:cursive">Invalid Phone Number</a><br><br>';
+        a.innerHTML = '<a style="color:lawngreen;font-weight:bold">Invalid Phone Number</a><br><br>';
       } else {
         const France_King = c.value.replace(/[^0-9]/g, "");
         let bb = "";
@@ -206,10 +206,10 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:red;font-size:20px";
-        a.innerHTML = '<a style="color:lawngreen;font-weight:bold;font-family:cursive">Generating pairing code...</a><br><br>';
+        a.innerHTML = '<a style="color:lawngreen;font-weight:bold">Generating pairing code...</a><br><br>';
         let { data } = await axios(`/code?number=${France_King}`);
         let code = data.code || "Service Unavailable";
-        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
+        a.innerHTML = '<font id="copy" onclick="Copy()" style="color:yellow;font-weight:bold" size="3">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
     });
   </script>
