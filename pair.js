@@ -57,30 +57,17 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
 
                let FLASH_MD_TEXT = `
-*𝕰𝖊𝖊𝖞... 𝖙𝖔𝖕𝖚 𝖉𝖒𝖍 𝖍𝖆𝖘 𝖏𝖚𝖘𝖙 𝖈𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉 𝖙𝖍𝖊 𝖘𝖊𝖘𝖘𝖎𝖔𝖓 𝖎𝖉*
-*Wow you choosen TOPU-MD complete the deployment and enyoy the speed*
-____________________________________
-╔════◇
-║『 *TOPU AI IS READY TO DEPLOY』
-║ YOUR SESSION IS READY. COPY IT  
-║ AND HOST IT ON YOUR WEB.
-╚════════════════════╝
-╔═════◇
-║ 『••• OWNER INFO •••』
+__________________________________
+*ABOVE IS 👆👆 YOUR SESSION ID*
+SEND IT TO YOUR BOT DEPLOYER FOR BOT CONNECTION
 
-║ ❒ 𝐎wner: _https://wa.me/message/5WRTCPHFKUGFM1_
+Thank you for choosing 4ORTY6YX-OFFICIAL-MD
 
-║ ❒ 𝐑𝐞𝐩𝐨: _https://github.com/Toputech/Topu-ai_
+DONT FORGET TO FOLLOW OUR WHATSAPP CHANNEL👇👇
 
-║ ❒ 𝐖𝐚𝐆𝐫𝐨𝐮𝐩: _https://chat.whatsapp.com/BxelCdrHnDYBNfMy2jafgI_
-
-║ ❒ 𝐖𝐚𝐂𝐡𝐚𝐧𝐧𝐞𝐥: _https://whatsapp.com/channel/0029VaeRrcnADTOKzivM0S1r_
-║ 
-╚════════════════════╝ 
- *©TOPU TECH*
+https://whatsapp.com/channel/0029Va27Qsy0lwgsOzNhbZ0R
 ___________________________________
-
-Don't Forget To Give Star To My Repo_`
+`
  await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
  
 
