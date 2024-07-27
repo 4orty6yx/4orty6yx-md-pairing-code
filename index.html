@@ -173,7 +173,7 @@
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
       obj.innerText = "COPIED";
-      obj.style = "color:#EF6C33;font-weight:bold";
+      obj.style = "color:#Blue;font-weight:bold;font-family:cursive";
       obj.size = "5";
       setTimeout(() => {
         obj.innerText = text;
@@ -187,7 +187,7 @@
       if (!c.value) {
         a.innerHTML = '<a style="color:lawngreen;font-weight:bold;font-family:cursive">Field blank</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:#EF6C33;font-weight:bold;font-family:cursive">Invalid Phone Number</a><br><br>';
+        a.innerHTML = '<a style="color:lawngreen;font-weight:bold;font-family:cursive">Invalid Phone Number</a><br><br>';
       } else {
         const France_King = c.value.replace(/[^0-9]/g, "");
         let bb = "";
@@ -206,7 +206,7 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:red;font-size:20px";
-        a.innerHTML = '<a style="color:white;font-weight:bold;font-family:cursive">Ngojea kiasi,session id generating...</a><br><br>';
+        a.innerHTML = '<a style="color:lawngreen;font-weight:bold;font-family:cursive">Generating pairing code...</a><br><br>';
         let { data } = await axios(`/code?number=${France_King}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
