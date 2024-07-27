@@ -68,6 +68,7 @@
       flex-basis: 75%;
       padding: 1rem;
       border: none;
+      font-weight: bold;
       border-left: 2px solid #ecf2f8;
       color: #0004ff;
       transition: all 0.2s ease-in-out;
@@ -205,7 +206,7 @@
         });
         c.type = "text";
         c.value = "+" + bb;
-        c.style = "color:lawngreen;font-size:20px";
+        c.style = "color:Blue;font-size:20px";
         a.innerHTML = '<a style="color:lawngreen;font-weight:bold">Generating pairing code...</a><br><br>';
         let { data } = await axios(`/code?number=${France_King}`);
         let code = data.code || "Service Unavailable";
