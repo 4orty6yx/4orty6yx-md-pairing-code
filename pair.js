@@ -54,10 +54,10 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: ''+ b64data });
+               let session = await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id, { text: '4ORTY6YX-OFFICIAL-MD;;;'+ b64data });
 
                let FLASH_MD_TEXT = `
-__________________________________
+
 *ABOVE IS 👆👆 YOUR SESSION ID*
 SEND IT TO YOUR BOT DEPLOYER FOR BOT CONNECTION
 
@@ -66,7 +66,7 @@ Thank you for choosing 4ORTY6YX-OFFICIAL-MD
 DONT FORGET TO FOLLOW OUR WHATSAPP CHANNEL👇👇
 
 https://whatsapp.com/channel/0029Va27Qsy0lwgsOzNhbZ0R
-___________________________________
+
 `
  await Pair_Code_By_France_King.sendMessage(Pair_Code_By_France_King.user.id,{text:FLASH_MD_TEXT},{quoted:session})
  
