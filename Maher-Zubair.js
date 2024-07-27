@@ -12,13 +12,13 @@ app.use('/pair',async (req, res, next) => {
 res.sendFile(__path + '/pair.html')
 })
 app.use('/',async (req, res, next) => {
-res.sendFile(__path + '/index.html')
+res.sendFile(__path + '/main.html')
 })
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
     console.log(`
-Topu-Qr-Scanner is Live
+Don't Forgot To Give Star
 
  Server running on http://localhost:` + PORT)
 })

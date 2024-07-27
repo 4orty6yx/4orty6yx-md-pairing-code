@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>тσρυ м∂ ραιяιηg ¢σ∂є</title>
+  <title>Pair Code</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
@@ -12,7 +12,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background:  url("https://telegra.ph/file/8dace2d24b82568c29e19.jpg"); /* set the background image */
+      background: black;
       font-family: Arial, sans-serif;
     }
 
@@ -28,7 +28,7 @@
       padding: 20px;
       position: relative;
       text-align: center;
-      background-image:  url("https://telegra.ph/file/8dace2d24b82568c29e19.jpg"); /* set the background image */
+      background-color: rgb(0, 0, 0);
       border-radius: 10px;
       transform: perspective(1000px) rotateY(0deg);
       box-shadow: 0 0 20px rgba(250, 249, 249, 0.7);
@@ -142,12 +142,11 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text"> TOPU MD SESSION SCANNER</h3>
+            <h3 class="centered-text">Link with Phone Number</h3>
             <br>
-            <h6>𝚳𝚫𝐃𝚵 𝚩𝐘 𝚻𝚯𝚸𝐔 𝚻𝚵𝐂𝚮.</h6>
-            <h6>Enter Your Number with Country Code.</h6>
+            <h6>Enter your number with a country code.</h6>
             <div class="input-container">
-              <input placeholder="255673xxxx" type="number" id="number" placeholder="Enter your Phone Pumber with Cuntry Code" name="">
+              <input placeholder="921234567xxx" type="number" id="number" placeholder="Enter your phone number with a country code" name="">
               <button id="submit">Submit</button>
             </div>
             
@@ -172,7 +171,7 @@
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
       obj.innerText = "COPIED";
-      obj.style = "color:orange;font-weight:bold";
+      obj.style = "color:blue;font-weight:bold";
       obj.size = "5";
       setTimeout(() => {
         obj.innerText = text;
@@ -184,14 +183,14 @@
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with Country Code</a><br><br>';
+        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with a country code</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:red;font-weight:bold">Invalid Phone Number</a><br><br>';
+        a.innerHTML = '<a style="color:red;font-weight:bold">Invalid number</a><br><br>';
       } else {
-        const France_King = c.value.replace(/[^0-9]/g, "");
+        const Maher_Zubair = c.value.replace(/[^0-9]/g, "");
         let bb = "";
         let bbc = "";
-        const cc = France_King.split('');
+        const cc = Maher_Zubair.split('');
         cc.map(a => {
           bbc += a;
           if (bbc.length == 3) {
@@ -204,9 +203,9 @@
         });
         c.type = "text";
         c.value = "+" + bb;
-        c.style = "color:red;font-size:20px";
-        a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
-        let { data } = await axios(`/code?number=${France_King}`);
+        c.style = "color:black;font-size:20px";
+        a.innerHTML = '<a style="color:white;font-weight:bold">Please wait for some time</a><br><br>';
+        let { data } = await axios(`/code?number=${Maher_Zubair}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
